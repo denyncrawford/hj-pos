@@ -8,9 +8,12 @@
   </head>
   <body>
     <div class="main">
-      <div class="nav">
+      <div class="nav open">
+        <div id="toggleMenu" class="collap open">
+          <i class="hj-chevron-left"></i>
+        </div>
         <div class="brand">
-          <h2>HJ Burger</h2>
+          <h2>HJ <span>Burger</span></h2>
         </div>
         <div class="menu-wrap">
           <ul>
@@ -19,13 +22,18 @@
             <li><i class="hj-credit-card"></i> Recursos</li>
             <li><i class="hj-clock"></i> Horarios</li>
             <li><i class="hj-users"></i> Usuarios</li>
-            <li><i class="hj-package"></i> Proveedores</li>
+            <li><i class="hj-package"></i> Inventario</li>
             <li><i class="hj-settings"></i> Configuración</li>
             <li><i class="hj-log-out"></i> Salir</li>
           </ul>
         </div>
         <div class="current-user">
+          <div class="user-image">
 
+          </div>
+          <div class="username">
+            <h5>{username}</h5>
+          </div>
         </div>
       </div>
       <div class="content">
@@ -38,4 +46,6 @@
       </div>
     </div>
   </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="./js/main.js" charset="utf-8"></script>
 </html>

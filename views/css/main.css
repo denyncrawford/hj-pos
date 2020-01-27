@@ -3,12 +3,30 @@
 :root {
   --main-color: #0E9F68;
   --secondary-text-color: #666666;
+  --primary-text-color: #262a2d;
+  --shade-background: #f6f6f6;
 }
 
 * {
   font-family:"Montserrat", sans-serif;
   margin: 0;
   padding: 0;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 html, body {
@@ -23,9 +41,61 @@ html, body {
 }
 
 .main .nav {
-  background-color: rgb(246, 246, 246);
+  background-color: var(--shade-background);
   display: flex;
   flex-direction: column;
+  position: absolute;
+  height: 100%;
+  box-shadow: 2px 0px 11px -3px rgba(0,0,0,0.26);
+  z-index: 2;
+  right: calc(100% - 260.67px);
+  transition: .5s;
+  max-width: 260.67px;
+}
+
+.main .nav.close {
+  right: 100%;
+}
+
+.main .nav .collap {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 70px;
+  width: 20px;
+  top: 50%;
+  bottom: 50%;
+  box-shadow: 2px 0px 11px -3px rgba(0,0,0,0.26);
+  background-color: rgb(34, 33, 37);
+  color: white;
+  z-index: 1;
+  right: calc(0% - 20px);
+}
+
+.main .nav .collap::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  color: white;
+  width: 0;
+  height: 0;
+  border-bottom: 20px solid rgb(34, 33, 37);
+  border-right: 20px solid transparent;
+}
+
+.main .nav .collap::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  color: white;
+  width: 0;
+  height: 0;
+  border-top: 20px solid rgb(34, 33, 37);
+  border-right: 20px solid transparent;
 }
 
 .main .content {
@@ -40,9 +110,18 @@ html, body {
   height: 70px;
 }
 
+.main .nav .brand h2 {
+  color: var(--primary-text-color);
+}
+
+.main .nav .brand h2 span {
+  color: var(--main-color);
+}
+
 .main .nav .menu-wrap {
   width: 100%;
   flex: 1;
+  overflow: auto;
 }
 
 .main .nav .menu-wrap ul {
@@ -60,6 +139,7 @@ html, body {
   cursor: pointer;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
+  margin: 10px 0;
 }
 
 .main .nav .menu-wrap ul li:hover {
@@ -68,6 +148,26 @@ html, body {
 
 .main .nav .menu-wrap ul li i {
   margin-right: 10px;
+}
+
+.main .nav .current-user {
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  background-color: #e7e7e7
+}
+
+.main .nav .current-user .user-image {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(57, 63, 64);
+  border-radius: 50%;
+}
+
+.main .nav .current-user .username {
+  color: var(--secondary-text-color);
+  margin-left: 20px;
 }
 
 .main .content .header {
