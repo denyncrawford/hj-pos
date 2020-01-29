@@ -185,11 +185,13 @@ html, body {
   width: 100%;
   height: 100%;
   position: absolute;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .content .sections .section.active {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 .main .content .sections .section .header-wraper {
@@ -207,11 +209,11 @@ html, body {
   align-items: center;
   position: absolute;
   transition: .5s;
-  top: 0;
+  top: -70px;
 }
 
-.main .content .sections .section .header-wraper .section-header.up {
-  top:-70px;
+.main .content .sections .section .header-wraper .section-header.down {
+  top: 0px;
 }
 
 .main .content .sections .section .header-wraper .section-header h2 {
