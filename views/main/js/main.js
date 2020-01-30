@@ -1,3 +1,11 @@
+const customTitlebar = require('custom-electron-titlebar');
+
+var titlebar = new customTitlebar.Titlebar({
+    backgroundColor: customTitlebar.Color.fromHex('#343c41'),
+    itemBackgroundColor: customTitlebar.Color.fromHex('#3e3e3e'),
+    menu: false
+});
+
 
 var toggleMenu = document.querySelector("#toggleMenu");
 var nav = document.querySelector(".nav");

@@ -204,7 +204,7 @@ html, body {
   width: calc(100% - 60px);
   padding:  0 30px;
   height: 100%;
-  background-color: var(--main-color);;
+  background-color: var(--primary-text-color);;
   display: flex;
   align-items: center;
   position: absolute;
