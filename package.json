@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "custom-electron-titlebar": "^3.2.1",
-    "electron": "^7.1.10",
+    "electron": "^9.4.0",
     "nedb": "^1.8.0"
   }
 }
